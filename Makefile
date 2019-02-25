@@ -1,9 +1,8 @@
-all: project
-
 start:
-    npx babel-node -- src/bin/brain-games.js
+	npx babel-node -- src/bin/brain-games.js
 
 install:
-    npm install
+	npm install
 
-project:
+publish:
+	npm publish
