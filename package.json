@@ -1,0 +1,15 @@
+{
+  "name": "project-lvl1-s450",
+  "version": "0.0.1",
+  "description": "Project1 on Hexlet within frontend profession",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "project-lvl1-s450"
+  },
+  "author": "adenisov",
+  "license": "ISC"
+}
