@@ -1,6 +1,6 @@
 {
   "name": "hexlet_project1_adenisov",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Project1 on Hexlet within frontend profession",
   "repository": {
     "type": "git",
@@ -32,7 +32,8 @@
     "prepublishOnly": "npm run build"
   },
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "dependencies": {
     "readline-sync": "^1.4.9"
