@@ -3,4 +3,4 @@
 // console.log(_.capitalize("welcome to the Brain Games!"))
 import getUserName from '..';
 
-getUserName();
+getUserName('');
