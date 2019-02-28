@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-// import _ from 'lodash'
-// console.log(_.capitalize("welcome to the Brain Games!"))
-import { quizEven } from '..';
+
+import quizEven from '../games/quizEven';
 
 quizEven();
