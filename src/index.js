@@ -18,6 +18,19 @@ export const evaluateExpression = (a, b, operand) => {
   }
 };
 
+export const getGcd = (num1, num2) => {
+  let a = num1;
+  let b = num2;
+  while (a !== 0 && b !== 0) {
+    if (a > b) {
+      a %= b;
+    } else {
+      b %= a;
+    }
+  }
+  return a + b;
+};
+
 export const ErrorMessage = (st1, st2, userName) => {
   console.log(`\x1b[31m${st1}\x1b[0m is wrong answer ;(. Correct answer was \x1b[31m${st2}\x1b[0m.\n Let\x1b[31m's try again, ${userName}!\x1b[0m\n`);
 };

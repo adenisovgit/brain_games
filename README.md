@@ -5,3 +5,6 @@
 
 Как установить и использовать пакет (запуск игры калькулятора):
 [![asciicast](https://asciinema.org/a/e9lfgqLHXW7i1EH1PjPgQ05cx.svg)](https://asciinema.org/a/e9lfgqLHXW7i1EH1PjPgQ05cx)
+
+Установка и использование пакета (для игры с поиском максимального общего делителя):
+[![asciicast](https://asciinema.org/a/8nigNtvrxAXbyqNtnAUK6TKXL.svg)](https://asciinema.org/a/8nigNtvrxAXbyqNtnAUK6TKXL)
