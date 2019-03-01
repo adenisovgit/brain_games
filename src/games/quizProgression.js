@@ -18,6 +18,6 @@ export const questionProgression = () => {
       questionStr += String(`${currentValue} `);
     }
   }
-  console.log(`Question: ${questionStr}`);
+  console.log(`Question: ${questionStr.slice(0, -1)}`);
   return missedValue;
 };
