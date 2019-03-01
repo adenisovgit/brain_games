@@ -1,6 +1,6 @@
 import * as tools from '../tools';
 
-export const greetingMsg = 'What number is missing \bin the progression?\n';
+export const greetingMsg = 'What number is missing \x1b[1min\x1b[0m the progression?\n';
 
 export const questionProgression = () => {
   const progressionLength = 10;
