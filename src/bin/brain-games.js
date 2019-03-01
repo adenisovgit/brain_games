@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import getUserNameGreetings from '..';
+import { getUserNameGreetings } from '..';
 
 getUserNameGreetings('');

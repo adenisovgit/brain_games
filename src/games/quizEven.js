@@ -1,22 +1,9 @@
-import * as common from '..';
-import readlineSync from 'readline-sync';
+import * as tools from '../tools';
 
-// игра с определением четности
-const quizEven = () => {
-  const userName = common.getUserNameGreetings(`Answer ${common.stYes} if number even otherwise answer ${common.stNo}.\n`);
-  for (let i = 0; i < common.tryCount; i += 1) {
-    const question = common.randomInteger(1, 100);
-    const answerCorrect = common.isEven(question) ? 'yes' : 'no';
-    console.log(`Question: ${question}`);
-    const answer = readlineSync.question('Your answer: ');
-    if (answer === answerCorrect) {
-      console.log('Correct!');
-    } else {
-      common.ErrorMessage(answer, answerCorrect, userName);
-      return;
-    }
-  }
-  common.CongratsMessage(userName);
+export const greetingMsg = 'Answer \x1b[31m"yes"\x1b[0m if number even otherwise answer \x1b[31m"no"\x1b[0m.\n';
+
+export const questionEven = () => {
+  const num = tools.randomInteger(1, 100);
+  console.log(`Question: ${num}`);
+  return tools.isEven(num) ? 'yes' : 'no';
 };
-
-export default quizEven;

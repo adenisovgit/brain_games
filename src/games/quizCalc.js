@@ -1,25 +1,12 @@
-import * as common from '..';
-import readlineSync from 'readline-sync';
+import * as tools from '../tools';
 
-// игра - калькулятор
-const quizCalc = () => {
+export const greetingMsg = 'What is the result of the expression?\n';
+
+export const questionCalc = () => {
   const operations = '+-*';
-  const userName = common.getUserNameGreetings('What is the result of the expression?\n');
-  for (let i = 0; i < common.tryCount; i += 1) {
-    const num1 = common.randomInteger(1, 100);
-    const num2 = common.randomInteger(1, 100);
-    const oper = operations[common.randomInteger(0, 2)];
-    const result = common.evaluateExpression(num1, num2, oper);
-    console.log(`Question: ${num1} ${oper} ${num2}`);
-    const answer = readlineSync.question('Your answer: ');
-    if (Number(answer) === result) {
-      console.log('Correct!');
-    } else {
-      common.ErrorMessage(answer, result, userName);
-      return;
-    }
-  }
-  common.CongratsMessage(userName);
+  const num1 = tools.randomInteger(1, 100);
+  const num2 = tools.randomInteger(1, 100);
+  const oper = operations[tools.randomInteger(0, 2)];
+  console.log(`Question: ${num1} ${oper} ${num2}`);
+  return tools.evaluateExpression(num1, num2, oper);
 };
-
-export default quizCalc;
