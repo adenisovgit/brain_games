@@ -1,12 +1,15 @@
 import * as tools from '../tools';
+import games from '..';
 
-export const greetingMsg = 'What is the result of the expression?\n';
+const greetingMsg = 'What is the result of the expression?\n';
 
-export const questionCalc = () => {
+const questionCalc = () => {
   const operations = '+-*';
   const num1 = tools.randomInteger(1, 100);
   const num2 = tools.randomInteger(1, 100);
   const oper = operations[tools.randomInteger(0, 2)];
-  console.log(`Question: ${num1} ${oper} ${num2}`);
-  return tools.evaluateExpression(num1, num2, oper);
+  const question = `Question: ${num1} ${oper} ${num2}`;
+  return [tools.evaluateExpression(num1, num2, oper), question];
 };
+
+export default () => (games(greetingMsg, questionCalc));

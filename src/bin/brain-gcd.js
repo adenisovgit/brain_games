@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { quizGcd } from '..';
+import quizGcd from '../games/quizGcd';
 
 quizGcd();

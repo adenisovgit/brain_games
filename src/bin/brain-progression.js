@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { quizProgression } from '..';
+import quizProgression from '../games/quizProgression';
 
 quizProgression();

@@ -1,9 +1,4 @@
 import readlineSync from 'readline-sync';
-import * as quizEvenModule from './games/quizEven';
-import * as quizCalcModule from './games/quizCalc';
-import * as quizGcdModule from './games/quizGcd';
-import * as quizProgressionModule from './games/quizProgression';
-
 
 const tryCount = 3; // максимум попыток
 
@@ -27,13 +22,12 @@ export const getUserNameGreetings = (st1) => {
 
 // единый движок игр. Для вызова игры в параметры передается
 // приветственное сообщение и функция постановки задачи/расчета ответа
-const games = (greetingMsg, question) => {
+const games = (greetingMsg, game) => {
   const userName = getUserNameGreetings(greetingMsg);
   for (let i = 0; i < tryCount; i += 1) {
-    // формируем вопрос, выводим его и возвращам правильный ответ
-    // своя функция для каждой игры
-    const answerCorrect = question();
-    // общая часть - запрос ответа и сравнение
+    // возвращаем из игры правильный ответ и строку для вопроса
+    const [answerCorrect, gameQuestion] = game();
+    console.log(gameQuestion);
     const answer = readlineSync.question('Your answer: ');
     if (String(answer) === String(answerCorrect)) {
       console.log('Correct!');
@@ -45,18 +39,4 @@ const games = (greetingMsg, question) => {
   CongratsMessage(userName);
 };
 
-export const quizEven = () => {
-  games(quizEvenModule.greetingMsg, quizEvenModule.questionEven);
-};
-
-export const quizCalc = () => {
-  games(quizCalcModule.greetingMsg, quizCalcModule.questionCalc);
-};
-
-export const quizGcd = () => {
-  games(quizGcdModule.greetingMsg, quizGcdModule.questionGcd);
-};
-
-export const quizProgression = () => {
-  games(quizProgressionModule.greetingMsg, quizProgressionModule.questionProgression);
-};
+export default games;

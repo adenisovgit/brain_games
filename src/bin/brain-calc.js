@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { quizCalc } from '..';
+import quizCalc from '../games/quizCalc';
 
 quizCalc();

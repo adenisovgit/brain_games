@@ -1,8 +1,9 @@
 import * as tools from '../tools';
+import games from '..';
 
-export const greetingMsg = 'What number is missing \x1b[1min\x1b[0m the progression?\n';
+const greetingMsg = 'What number is missing \x1b[1min\x1b[0m the progression?\n';
 
-export const questionProgression = () => {
+const questionProgression = () => {
   const progressionLength = 10;
   const numStart = tools.randomInteger(1, 100); // первый элемент прогрессии
   const numStep = tools.randomInteger(1, 5); // шаг прогрессии
@@ -18,6 +19,8 @@ export const questionProgression = () => {
       questionStr += String(`${currentValue} `);
     }
   }
-  console.log(`Question: ${questionStr.slice(0, -1)}`);
-  return missedValue;
+  const question = `Question: ${questionStr.slice(0, -1)}`;
+  return [missedValue, question];
 };
+
+export default () => (games(greetingMsg, questionProgression));
