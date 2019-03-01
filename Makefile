@@ -10,6 +10,9 @@ startg:
 startp:
 	npx babel-node -- src/bin/brain-progression.js
 
+startpr:
+	npx babel-node -- src/bin/brain-prime.js
+
 install:
 	npm install
 

@@ -11,3 +11,6 @@
 
 Установка и использование пакета (для игры с поиском пропущенного элемента прогрессии):
 [![asciicast](https://asciinema.org/a/lC5d72HOPvdZ6X0JbiVvvAShc.svg)](https://asciinema.org/a/lC5d72HOPvdZ6X0JbiVvvAShc)
+
+Установка и использование пакета (для игры с определением простого числа):
+[![asciicast](https://asciinema.org/a/crc62PBK6vF51ON5OZqU8yrLn.svg)](https://asciinema.org/a/crc62PBK6vF51ON5OZqU8yrLn)
