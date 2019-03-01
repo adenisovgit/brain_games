@@ -7,6 +7,9 @@ starte:
 startg:
 	npx babel-node -- src/bin/brain-gcd.js
 
+startp:
+	npx babel-node -- src/bin/brain-progression.js
+
 install:
 	npm install
 

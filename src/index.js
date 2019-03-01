@@ -2,6 +2,8 @@ import readlineSync from 'readline-sync';
 import * as quizEvenModule from './games/quizEven';
 import * as quizCalcModule from './games/quizCalc';
 import * as quizGcdModule from './games/quizGcd';
+import * as quizProgressionModule from './games/quizProgression';
+
 
 const tryCount = 3; // максимум попыток
 
@@ -53,4 +55,8 @@ export const quizCalc = () => {
 
 export const quizGcd = () => {
   games(quizGcdModule.greetingMsg, quizGcdModule.questionGcd);
+};
+
+export const quizProgression = () => {
+  games(quizProgressionModule.greetingMsg, quizProgressionModule.questionProgression);
 };

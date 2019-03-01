@@ -8,3 +8,6 @@
 
 Установка и использование пакета (для игры с поиском максимального общего делителя):
 [![asciicast](https://asciinema.org/a/8nigNtvrxAXbyqNtnAUK6TKXL.svg)](https://asciinema.org/a/8nigNtvrxAXbyqNtnAUK6TKXL)
+
+Установка и использование пакета (для игры с поиском пропущенного элемента прогрессии):
+[![asciicast](https://asciinema.org/a/lC5d72HOPvdZ6X0JbiVvvAShc.svg)](https://asciinema.org/a/lC5d72HOPvdZ6X0JbiVvvAShc)
