@@ -1,12 +1,14 @@
-import * as tools from '../tools';
+import randomInteger from '../tools';
 import games from '..';
 
-const greetingMsg = 'Answer \x1b[31m"yes"\x1b[0m if number even otherwise answer \x1b[31m"no"\x1b[0m.\n';
+const greetingMsg = 'Answer "yes" if number even otherwise answer "no".';
+const isEven = x => (x % 2 === 0);
 
 const questionEven = () => {
-  const num = tools.randomInteger(1, 100);
-  const question = `Question: ${num}`;
-  return [tools.isEven(num) ? 'yes' : 'no', question];
+  const num = randomInteger(1, 100);
+  const question = `${num}`;
+  const answerCorrect = isEven(num) ? 'yes' : 'no';
+  return [answerCorrect, question];
 };
 
 export default () => (games(greetingMsg, questionEven));

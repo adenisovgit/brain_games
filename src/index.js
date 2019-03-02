@@ -14,7 +14,7 @@ const CongratsMessage = (userName) => {
 // Приветствие с запросом и возвратом имени игрока.
 export const getUserNameGreetings = (st1) => {
   console.log('Welcome to the Brain Games!');
-  console.log(st1);
+  console.log(`${st1}\n`);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello ${userName}!\n`);
   return userName;
@@ -27,7 +27,7 @@ const games = (greetingMsg, game) => {
   for (let i = 0; i < tryCount; i += 1) {
     // возвращаем из игры правильный ответ и строку для вопроса
     const [answerCorrect, gameQuestion] = game();
-    console.log(gameQuestion);
+    console.log(`Question: ${gameQuestion}`);
     const answer = readlineSync.question('Your answer: ');
     if (String(answer) === String(answerCorrect)) {
       console.log('Correct!');

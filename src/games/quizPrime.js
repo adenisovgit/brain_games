@@ -1,13 +1,20 @@
-import * as tools from '../tools';
+import randomInteger from '../tools';
 import games from '..';
 
-const greetingMsg = 'Answer \x1b[31m"yes"\x1b[0m if given number is prime. Otherwise answer \x1b[31m"no"\x1b[0m.\n';
+const isPrime = (num) => {
+  for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
+    if (num % i === 0) return false;
+  }
+  return num > 1;
+};
 
+const greetingMsg = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const questionPrime = () => {
-  const num = tools.randomInteger(1, 100);
+  const num = randomInteger(1, 100);
   const question = `Question: ${num}`;
-  return [tools.isPrime(num) ? 'yes' : 'no', question];
+  const answerCorrect = isPrime(num) ? 'yes' : 'no';
+  return [answerCorrect, question];
 };
 
 export default () => (games(greetingMsg, questionPrime));
