@@ -12,7 +12,7 @@ const greetingMsg = 'Answer "yes" if given number is prime. Otherwise answer "no
 
 const questionPrime = () => {
   const num = randomInteger(1, 100);
-  const question = `Question: ${num}`;
+  const question = `${num}`;
   const correctAnswer = isPrime(num) ? 'yes' : 'no';
   return [correctAnswer, question];
 };
