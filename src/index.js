@@ -29,11 +29,11 @@ const games = (greetingMsg, game) => {
     // возвращаем из игры правильный ответ и строку для вопроса
     const [correctAnswer, gameQuestion] = game();
     console.log(`Question: ${gameQuestion}`);
-    const answer = readlineSync.question('Your answer: ');
-    if (answer === correctAnswer) {
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (userAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
-      errorMessage(answer, correctAnswer, userName);
+      errorMessage(userAnswer, correctAnswer, userName);
       return;
     }
   }
