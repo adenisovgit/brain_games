@@ -22,8 +22,8 @@ const questionCalc = () => {
   const num2 = randomInteger(1, 100);
   const oper = operations[randomInteger(0, 2)];
   const question = `${num1} ${oper} ${num2}`;
-  const answerCorrect = evaluateExpression(num1, num2, oper);
-  return [answerCorrect, question];
+  const correctAnswer = String(evaluateExpression(num1, num2, oper));
+  return [correctAnswer, question];
 };
 
 export default () => (games(greetingMsg, questionCalc));

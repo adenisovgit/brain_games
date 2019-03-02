@@ -20,8 +20,8 @@ const questionGcd = () => {
   const num1 = randomInteger(1, 100);
   const num2 = randomInteger(1, 100);
   const question = `${num1} ${num2}`;
-  const answerCorrect = getGcd(num1, num2);
-  return [answerCorrect, question];
+  const correctAnswer = String(getGcd(num1, num2));
+  return [correctAnswer, question];
 };
 
 export default () => (games(greetingMsg, questionGcd));

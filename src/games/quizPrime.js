@@ -13,8 +13,8 @@ const greetingMsg = 'Answer "yes" if given number is prime. Otherwise answer "no
 const questionPrime = () => {
   const num = randomInteger(1, 100);
   const question = `Question: ${num}`;
-  const answerCorrect = isPrime(num) ? 'yes' : 'no';
-  return [answerCorrect, question];
+  const correctAnswer = isPrime(num) ? 'yes' : 'no';
+  return [correctAnswer, question];
 };
 
 export default () => (games(greetingMsg, questionPrime));

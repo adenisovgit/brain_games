@@ -1,3 +1,6 @@
+start:
+	npx babel-node -- src/bin/brain-games.js
+
 startc:
 	npx babel-node -- src/bin/brain-calc.js
 
